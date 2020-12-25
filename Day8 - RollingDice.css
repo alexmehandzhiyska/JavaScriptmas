@@ -1,0 +1,99 @@
+body {
+    background-color: #aeb8fe;
+    display: flex;
+}
+
+.dice {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: #efe5dc;
+    margin: 100px;
+    box-sizing: border-box;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: black;
+    margin: 35px;
+}
+
+.two,
+.three,
+.six {
+    justify-content: space-between;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.four,
+.five {
+    padding: 8px;
+    position: relative;
+}
+
+.dice.two .dot {
+    margin: 0px;
+}
+.dice.two .dot:nth-child(2) {
+    margin-left: auto;
+}
+
+.dice.three .dot {
+    margin: 0px;
+}
+.dice.three .dot:nth-child(2) {
+    margin: 0 auto;
+}
+.dice.three .dot:nth-child(3) {
+    margin-left: auto;
+}
+
+.dice.four .dot {
+    position: absolute;
+    margin: 0px;
+}
+.dice.four .dot:nth-child(3) {
+    bottom: 8px;
+}
+.dice.four .dot:nth-child(even) {
+    right: 8px;
+}
+.dice.four .dot:nth-child(4) {
+    bottom: 8px;
+}
+
+.dice.five .dot {
+    margin: 0px;
+    position: absolute;
+}
+.dice.five .dot:nth-child(3) {
+    top: 40%;
+    left: 39%;
+    right: 50%;
+}
+.dice.five .dot:nth-child(even) {
+    right: 8px;
+}
+.dice.five .dot:nth-child(4) {
+    bottom: 8px;
+}
+.dice.five .dot:nth-child(5) {
+    bottom: 8px;
+}
+
+.dice.six {
+    justify-content: space-between;
+    padding: 8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.dice.six .dot {
+    margin: 0px;
+}
+.dice.six .dot:nth-child(even) {
+    justify-self: end;
+}
